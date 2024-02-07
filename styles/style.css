@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap'); /*Importa as fontes para o codigo*/
+
+:root {
+    --cor-primaria: #bca875;         /*#e0cbf0;*/
+    --cor-secundaria: #7b8055;        /*#46BFF0;*/
+    --cor-terciaria: #384030;                 /*#4654F0;*/
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Monteserrat', sans-serif;
+}
+
+*{ /* Seleciona todos os estilos do codigo*/
+    margin: 0; /*Reset dos estilos*/
+    padding: 0;
+}
+
+body {
+    /*height: 100vh;    Altura 100% do dispositivo*/
+    box-sizing: border-box; /* Para o elemento não sair do body*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+
+}
+strong {
+    color: var(--cor-terciaria);
+}
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao {
+    padding: 5% 15%;
+    display: flex; /*Deixar a formatação dos itens como flex para ficar lado a lado*/
+    align-items: center;  /*Alinhar os itens ao centro entre si*/
+    justify-content: space-between;  /*Tipo da formatação do flex*/
+    gap: 82px;
+}
+img {
+    width: 250px;  /*Largura/Tamanho da imagem*/
+    border-radius: 10px;  /*Arredondar as pontas da imagem*/
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex; /*Colocar o display flex no container (classe principal contendo os itens*/
+    flex-direction: column; /*Define a orientação dos itens em coluna*/
+    gap: 40px; /*Define o espaçamento entre os itens filhos do container*/
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria); /*Puxar a fonte importada*/
+
+}
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family:var(--fonte-secundaria);
+}
+.apresentacao__conteudo__texto__about {
+    color: black;
+    font-size: 1.5rem;
+    font-family:var(--fonte-secundaria);
+}
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;     /*Deixar em colunas a orientação dos links*/
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+.apresentacao__links__subtitulos {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.apresentacao__links__link {
+                        /* background-color: #5D91DE; */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid var(--cor-terciaria);
+    font-size: 1.5rem;
+    color: black; /* Cor da fonte*/
+    padding: 21.5px 0; /* Padding dessa maneira pega vertical e horizontal*/
+    text-decoration: none; /* Remove o sublinado do link*/
+    font-family:var(--fonte-secundaria);
+    font-weight: 600; /* Peso da fonte, tambem tem que ta importado*/
+}
+.apresentacao__links__link:hover {
+    background-color:  var(--cor-secundaria);
+}
+.apresentacao__links__icones {
+    width: 30px;
+}
+.apresentacao__img {
+    width: 40%;
+}
+
+.rodape {
+    color: black;
+    background-color: var(--cor-secundaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.rodape__about {
+    color: black;
+    background-color: var(--cor-secundaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+}
